@@ -3,7 +3,7 @@ import {
   View,
   Image,
   ActivityIndicator,
-  TouchableHighlight,
+  TouchableOpacity,
   Dimensions
 } from "react-native";
 
@@ -75,7 +75,7 @@ export class SliderBox extends Component {
           justifyContent: "center"
         }}
       >
-        <TouchableHighlight
+        <TouchableOpacity
           key={index}
           disabled={disableOnPress}
           onPress={this.onCurrentImagePressedHandler}
@@ -102,7 +102,7 @@ export class SliderBox extends Component {
             }}
             {...this.props}
           />
-        </TouchableHighlight>
+        </TouchableOpacity>
         {!this.state.loading[index] && (
           <ActivityIndicator
             size="large"
